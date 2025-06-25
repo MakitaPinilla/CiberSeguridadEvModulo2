@@ -1,0 +1,76 @@
+/* ESTILO GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Big Shoulders Stencil", sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+/* TITULOS Y TEXTO */
+h1 {
+  color: rgb(255, 0, 68);
+}
+
+p {
+  font-size: large;
+}
+
+/* CARRUSEL DE PAGE 2 */
+.carousel-inner {
+  min-height: 600px;
+  background-color: black;
+  color: white;
+}
+
+.carousel-img {
+  margin-top: 50px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-img img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* TARJETAS DEL CARRUSEL */
+.card {
+  background-color: black;
+  border: none;
+}
+
+.card-body {
+  padding: 2rem;
+  text-align: center;
+  color: aliceblue;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* MEDIA QUERY MÓVIL */
+@media (max-width: 576px) {
+  body {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+}
