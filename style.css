@@ -13,16 +13,11 @@ body {
 
 }
 
-h3{
-  color: rgb(255, 69, 2);
-}
-
 /* ESTILO DEL HERO SECTION - SECCIÓN PRINCIPAL DEL INICIO */
 .hero-section {
   padding: 60px 20px; /* ESPACIADO INTERNO ARRIBA/ABAJO Y LATERALES */
   text-align: center; 
 }
-
 
 /* EFECTO HOVER EN LAS CARDS - PARA AGRANDARSE SUAVEMENTE AL PASAR EL CURSOR */
 .card {
