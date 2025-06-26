@@ -60,7 +60,7 @@
 
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Inicio</a>
         <button
@@ -84,95 +84,115 @@
       </div>
     </nav>
 
-    <!-- TÍTULO -->
+    <!-- INICIO MAIN -->
     <main class="container my-5">
-      <h1 class="text-center my-5">Principales Amenazas de Ciberseguridad</h1>
+      <h1 class="text-center my-5">
+        <strong>Principales Amenazas de Ciberseguridad</strong>
+      </h1>
 
-      <!-- CARRUSEL DE AMENAZAS -->
-      <div id="ciberCarrusel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <!-- PHISHING -->
-          <div class="carousel-item active p-4">
-            <div class="text-center">
-              <img
-                src="./img/pishing.png"
-                class="d-block w-100"
-                alt="Phishing"
-                style="max-height: 400px; object-fit: contain"
-              />
-              <h2 class="pt-4">PHISHING</h2>
-              <p>
+      <!-- FILA DE CARDS -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <!-- PHISHING -->
+        <div class="col">
+          <div class="card h-100 bg-dark text-white text-center">
+            <img
+              src="./img/pishing.png"
+              class="card-img-top pt-3"
+              alt="Phishing"
+              style="max-height: 200px; object-fit: contain"
+            />
+            <div class="card-body">
+              <h3 class="card-title text-warning"><strong>PHISHING</strong></h3>
+              <p class="card-text">
                 Engaño para obtener contraseñas o información bancaria simulando
                 ser una entidad confiable.
               </p>
-            </div>
-          </div>
-
-          <!-- RANSOMWARE -->
-          <div class="carousel-item p-4">
-            <div class="text-center">
-              <img
-                src="./img/ransomware.jpg"
-                class="d-block w-100"
-                alt="Ransomware"
-                style="max-height: 400px; object-fit: contain"
-              />
-              <h2 class="pt-4">RANSOMWARE</h2>
-              <p>Bloquea archivos o sistemas y exige pago para recuperarlos.</p>
-            </div>
-          </div>
-
-          <!-- MALWARE -->
-          <div class="carousel-item p-4">
-            <div class="text-center">
-              <img
-                src="./img/malware.jpeg"
-                class="d-block w-100"
-                alt="Malware"
-                style="max-height: 400px; object-fit: contain"
-              />
-              <h2 class="pt-4">MALWARE</h2>
-              <p>Programa dañino que roba información o daña tu equipo.</p>
-            </div>
-          </div>
-
-          <!-- DDoS -->
-          <div class="carousel-item p-4">
-            <div class="text-center">
-              <img
-                src="./img/ddos.jpg"
-                class="d-block w-100"
-                alt="DDoS"
-                style="max-height: 400px; object-fit: contain"
-              />
-              <h2 class="pt-4">ATAQUES DDoS</h2>
-              <p>
-                Inundan servidores con tráfico falso para hacerlos caer o
-                volverlos lentos.
+              <p class="card-text small fst-italic text-danger">
+                Ejemplo 1: Correo del “banco” pidiendo actualizar tu cuenta
+                desde un enlace.<br />
+                Ejemplo 2: Ventana emergente que dice “Ganaste $10.000” y te
+                pide tus datos.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- BOTONES CARRUSEL -->
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#ciberCarrusel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon"></span>
-          <span class="visually-hidden">Anterior</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#ciberCarrusel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon"></span>
-          <span class="visually-hidden">Siguiente</span>
-        </button>
+        <!-- RANSOMWARE -->
+        <div class="col">
+          <div class="card h-100 bg-dark text-white text-center">
+            <img
+              src="./img/ransomware.jpg"
+              class="card-img-top pt-3"
+              alt="Ransomware"
+              style="max-height: 200px; object-fit: contain"
+            />
+            <div class="card-body">
+              <h3 class="card-title text-warning">
+                <strong>RANSOMWARE</strong>
+              </h3>
+              <p class="card-text">
+                Bloquea archivos o sistemas y exige pago para recuperarlos.
+              </p>
+              <p class="card-text small fst-italic text-danger">
+                Ejemplo 1: Abres un archivo adjunto en el trabajo y todos los
+                documentos quedan cifrados.<br />
+                Ejemplo 2: Tu computador muestra un mensaje pidiendo pagar en
+                criptomonedas para recuperar tus archivos personales.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MALWARE -->
+        <div class="col">
+          <div class="card h-100 bg-dark text-white text-center">
+            <img
+              src="./img/malware.jpeg"
+              class="card-img-top pt-3"
+              alt="Malware"
+              style="max-height: 200px; object-fit: contain"
+            />
+            <div class="card-body">
+              <h3 class="card-title text-warning"><strong>MALWARE</strong></h3>
+              <p class="card-text">
+                Programa dañino que roba información, espía o daña tu equipo.
+              </p>
+              <p class="card-text small fst-italic text-danger">
+                Ejemplo 1: Descargas una app gratuita y empieza a abrir ventanas
+                con publicidad sin parar.<br />
+                Ejemplo 2: Instalas un programa pirata en casa y tu teclado
+                comienza a ser monitoreado sin que lo sepas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DDoS -->
+        <div class="col">
+          <div class="card h-100 bg-dark text-white text-center">
+            <img
+              src="./img/ddos.jpg"
+              class="card-img-top pt-3"
+              alt="DDoS"
+              style="max-height: 200px; object-fit: contain"
+            />
+            <div class="card-body">
+              <h3 class="card-title text-warning">
+                <strong>ATAQUES DDoS</strong>
+              </h3>
+              <p class="card-text">
+                Inundan servidores con tráfico falso para hacerlos caer o
+                volverlos lentos.
+              </p>
+              <p class="card-text small fst-italic text-danger">
+                Ejemplo 1: Una tienda online colapsa justo en el Black Friday y
+                nadie puede comprar.<br />
+                Ejemplo 2: El sitio web de una municipalidad se cae tras un
+                ataque y no se pueden hacer trámites.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </body>

@@ -1,76 +1,55 @@
-/* ESTILO GLOBAL */
+/* RESET DE ESTILOS GENERALES */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Big Shoulders Stencil", sans-serif;
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: "Big Shoulders Stencil", sans-serif; 
 }
 
+/* ESTILO DEL BODY */
 body {
-  background-color: aliceblue;
+  background-color: black; 
+  color: white; 
+
 }
 
-/* TITULOS Y TEXTO */
-h1 {
-  color: rgb(255, 0, 68);
+h3{
+  color: rgb(255, 69, 2);
 }
 
-p {
-  font-size: large;
+/* ESTILO DEL HERO SECTION - SECCIÓN PRINCIPAL DEL INICIO */
+.hero-section {
+  padding: 60px 20px; /* ESPACIADO INTERNO ARRIBA/ABAJO Y LATERALES */
+  text-align: center; 
 }
 
-/* CARRUSEL DE PAGE 2 */
-.carousel-inner {
-  min-height: 600px;
-  background-color: black;
-  color: white;
-}
 
-.carousel-img {
-  margin-top: 50px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.carousel-img img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-/* TARJETAS DEL CARRUSEL */
+/* EFECTO HOVER EN LAS CARDS - PARA AGRANDARSE SUAVEMENTE AL PASAR EL CURSOR */
 .card {
-  background-color: black;
-  border: none;
+  transition: transform 0.8s ease; /* ANIMACIÓN SUAVE DE TRANSFORMACIÓN */
 }
 
-.card-body {
-  padding: 2rem;
-  text-align: center;
-  color: aliceblue;
-  max-width: 800px;
-  margin: auto;
+.card:hover {
+  transform: scale(1.2); /* AGRANDA LA CARD UN 50% MAS */
 }
 
-/* MEDIA QUERY MÓVIL */
+/* MEDIA QUERY - ADAPTA ESTILOS A PANTALLAS PEQUEÑAS COMO MÓVILES */
 @media (max-width: 576px) {
   body {
-    font-size: 16px;
+    font-size: 16px; /* TAMAÑO BASE DEL TEXTO PARA MÓVILES */
   }
 
   h2 {
-    font-size: 1.4rem;
-    text-align: center;
+    font-size: 1.4rem; /* AJUSTA TÍTULOS PARA QUE NO SEAN TAN GRANDES EN MÓVILES */
+    text-align: center; /* CENTRA LOS TÍTULOS EN MÓVILES */
   }
 
   .btn {
-    width: 100%;
-    margin-top: 10px;
+    width: 100%; /* BOTONES OCUPAN TODO EL ANCHO EN MÓVIL */
+    margin-top: 10px; /* SEPARACIÓN ENTRE BOTONES */
   }
 
   input, textarea {
-    width: 100%;
+    width: 100%; /* CAMPOS DE FORMULARIO AL 100% EN MÓVIL */
   }
 }

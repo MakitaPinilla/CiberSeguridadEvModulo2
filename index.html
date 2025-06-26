@@ -63,7 +63,7 @@
 
   <body>
     <!-- NAVBAR SIMPLE -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Inicio</a>
         <button
@@ -87,42 +87,69 @@
       </div>
     </nav>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="container my-5">
-      <h1 class="text-center my-5">
-        <strong>CIBERSEGURIDAD:</strong> Todo lo que necesitas saber para
-        prevenir ataques
-      </h1>
+    <!-- INICIO MAIN -->
+    <main class="hero-section">
+      <div class="container">
+        <h1 class="mb-3">
+          <strong>
+            Ciberseguridad, explicada sin rodeos. Lo que necesitas saber para
+            mantenerte un paso adelante.</strong
+          >
+        </h1>
+        <h3 class="mb-4 text-warning">
+          Una guía clara sobre cómo funcionan las amenazas digitales y cómo
+          protegerte.
+        </h3>
 
-      <!-- IMAGEN DESTACADA -->
-      <img
-        src="./img/bg-ciberseguridad1.jpg"
-        alt="Imagen de ciberseguridad"
-        class="img-fluid w-100"
-        style="max-height: 400px; object-fit: cover"
-      />
+        <!-- CARRUSEL BOOTSTRAP -->
+        <div
+          id="heroCarousel"
+          class="carousel slide mt-5"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./img/carrusel1.jpg"
+                class="d-block w-100"
+                alt="Imagen 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./img/carrusel2.jpg"
+                class="d-block w-100"
+                alt="Imagen 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./img/carrusel3.jpg"
+                class="d-block w-100"
+                alt="Imagen 3"
+              />
+            </div>
+          </div>
 
-      <!-- TEXTO INFORMATIVO -->
-      <section class="container my-5">
-        <p>
-          La <strong>ciberseguridad</strong> es el conjunto de prácticas,
-          tecnologías y procesos diseñados para proteger sistemas informáticos,
-          redes y datos contra accesos no autorizados.
-        </p>
-        <p>
-          Su objetivo es garantizar la
-          <strong>confidencialidad, integridad y disponibilidad</strong> de la
-          información.
-        </p>
-        <p>
-          Incluye seguridad de redes, aplicaciones, protección contra malware y
-          concienciación del usuario.
-        </p>
-        <p>
-          Las amenazas como <em>phishing</em>, ransomware, malware o ataques
-          DDoS pueden tener consecuencias graves.
-        </p>
-      </section>
+          <!-- BOTON CARRUSEL BOOTSTRAP -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
     </main>
   </body>
 </html>

@@ -52,7 +52,7 @@
 
   <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Inicio</a>
         <button
@@ -78,65 +78,74 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container my-5">
-      <h1 class="text-center mb-5">Buenas Prácticas de Ciberseguridad</h1>
+      <h1 class="text-center mb-5">
+        <strong>Buenas Prácticas de Ciberseguridad</strong>
+      </h1>
 
-      <!-- LISTA DE BUENAS PRÁCTICAS -->
-      <section class="mb-5">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <i class="fas fa-shield-alt text-primary me-2"></i>Usa contraseñas
-            seguras y únicas.
-          </li>
-          <li class="list-group-item">
-            <i class="fas fa-lock text-primary me-2"></i>Activa la verificación
-            en dos pasos.
-          </li>
-          <li class="list-group-item">
-            <i class="fas fa-download text-primary me-2"></i>No descargues de
-            sitios sospechosos.
-          </li>
-          <li class="list-group-item">
-            <i class="fas fa-wifi text-primary me-2"></i>Evita redes Wi-Fi
-            públicas sin VPN.
-          </li>
-          <li class="list-group-item">
-            <i class="fas fa-user-shield text-primary me-2"></i>Actualiza tu
-            software regularmente.
-          </li>
-        </ul>
-      </section>
+      <!-- LISTA + FORMULARIO en columnas -->
+      <div class="row">
+        <!-- LISTA DE BUENAS PRÁCTICAS -->
+        <div class="col-md-6 mb-4">
+          <div class="bg-dark text-white p-4 h-100 rounded">
+            <ul class="list-group text-center">
+              <li class="list-group-item py-4">
+                <i class="fas fa-shield-alt text-warning me-2"></i>Usa
+                contraseñas seguras y únicas.
+              </li>
+              <li class="list-group-item py-4">
+                <i class="fas fa-lock text-warning me-2"></i>Activa la
+                verificación en dos pasos.
+              </li>
+              <li class="list-group-item py-4">
+                <i class="fas fa-download text-warning me-2"></i>No descargues
+                de sitios sospechosos.
+              </li>
+              <li class="list-group-item py-4">
+                <i class="fas fa-wifi text-warning me-2"></i>Evita redes Wi-Fi
+                públicas sin VPN.
+              </li>
+              <li class="list-group-item py-4">
+                <i class="fas fa-user-shield text-warning me-2"></i>Actualiza tu
+                software regularmente.
+              </li>
+            </ul>
+          </div>
+        </div>
 
-      <!-- FORMULARIO DE CONTACTO -->
-      <section class="bg-dark text-white p-4 mb-5">
-        <h2>Solicita más información</h2>
-        <form id="contactForm">
-          <div class="mb-3">
-            <label for="nombre">Nombre:</label>
-            <input type="text" class="form-control" id="nombre" required />
-          </div>
-          <div class="mb-3">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" class="form-control" id="email" required />
-          </div>
-          <div class="mb-3">
-            <label for="mensaje">Mensaje:</label>
-            <textarea
-              class="form-control"
-              id="mensaje"
-              rows="3"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" class="btn btn-danger">Enviar</button>
-        </form>
-        <div id="formMsg" class="mt-3"></div>
-      </section>
+        <!-- FORMULARIO DE CONTACTO -->
+        <div class="col-md-6 mb-4">
+          <section class="bg-warning text-dark p-4 h-100 rounded">
+            <h2>Solicita más información</h2>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" required />
+              </div>
+              <div class="mb-3">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="mensaje">Mensaje:</label>
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark">Enviar</button>
+            </form>
+            <div id="formMsg" class="mt-3"></div>
+          </section>
+        </div>
+      </div>
 
       <!-- TEST DE SEGURIDAD EN MODAL -->
-      <section class="text-center">
+      <section class="text-center mt-5">
         <h2>¿Qué tanto sabes de seguridad?</h2>
         <button
-          class="btn btn-dark"
+          class="btn btn-danger"
           data-bs-toggle="modal"
           data-bs-target="#testModal"
         >
@@ -144,12 +153,16 @@
         </button>
       </section>
 
+      <!-- MODAL -->
       <div class="modal fade" id="testModal" tabindex="-1">
         <div class="modal-dialog">
-          <div class="modal-content">
+          <div class="modal-content bg-dark text-white rounded">
             <div class="modal-header">
               <h5 class="modal-title">Mini Test de Seguridad</h5>
-              <button class="btn-close" data-bs-dismiss="modal"></button>
+              <button
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+              ></button>
             </div>
             <div class="modal-body">
               <p><strong>Pregunta:</strong> ¿Cuál es una buena práctica?</p>
@@ -169,7 +182,7 @@
               </ul>
             </div>
             <div class="modal-footer">
-              <button class="btn btn-success" onclick="verificarRespuesta()">
+              <button class="btn btn-warning" onclick="verificarRespuesta()">
                 Verificar
               </button>
             </div>
